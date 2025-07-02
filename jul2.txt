@@ -1,0 +1,62 @@
+2 july 2025
+
+//largest elements>
+
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    int arr[] = {4, 9, 2, 15, 6}, max = arr[0];
+    for (int i = 1; i < 5; i++) 
+        if (arr[i] > max) max = arr[i];
+    cout << "Largest: " << max;
+}
+
+//find sum average of an array[5]
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    int arr[] = {4, 9, 2, 15, 6};
+    int sum =0;
+    for (int i = 1; i < 5; i++) {
+        sum+= arr[i];
+        float avg= sum/0.5;
+        cout << "sum: " << sum <<"\naverage:"<<avg;
+}
+}
+// print only unique elements in an array
+
+#include <iostream>
+using namespace std;x
+
+int main() {
+    int arr[] = {10, 5, 20, 8, 15, 12};
+    int n = sizeof(arr) / sizeof(arr[0]);
+
+    int first = arr[0], second = -1e9, third = -1e9;
+
+    // Step 1: Find the largest (first)
+    for (int i = 1; i < n; i++) {
+        if (arr[i] > first)
+            first = arr[i];
+    }
+
+    // Step 2: Find the second largest (not equal to first)
+    for (int i = 0; i < n; i++) {
+        if (arr[i] > second && arr[i] < first)
+            second = arr[i];
+    }
+
+    // Step 3: Find the third largest (not equal to first or second)
+    for (int i = 0; i < n; i++) {
+        if (arr[i] > third && arr[i] < second)
+            third = arr[i];
+    }
+
+    cout << "2nd largest: " << second << "\n3rd largest: " << third;
+}
+
+//
